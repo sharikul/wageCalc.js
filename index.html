@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WageCalc</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+        <script src="wageCalc.js"></script>
+    </head>
+    <body>
+      <div class="container">
+          <h1>WageCalc</h1>
+        <br>
+          <input type="number" class="span3" id="rate" placeholder="Type in your hourly rate">
+          <input type="number" class="span3" id="hours" placeholder="Type in your hours worked">
+          <button type="#" id="calculate" class="btn">Calculate</button>
+        <br>
+        <p id="conclusion">Your total earnings for this day is around <strong><span id="result">x</span></strong> in your local currency.</p>
+
+      </div>
+      <script>
+        $("#calculate").click(function() {
+            var result = Math.round(wageCalc(Number($("#rate").val()), Number($("#hours").val())));
+            $("#result").text(result);
+        })
+    </script>
+    </body>
+</html>

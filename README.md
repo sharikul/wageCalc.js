@@ -10,3 +10,5 @@ function wageCalc(rate, hours);
 * Hours: number of hours worked in total.
 
 The function converts hours to an x/100 number, e.g. 5.30 hours becomes 5.50 because .30 is half of .60 just like .50 is half of .1, and calculates rate * hours, and returns a number.
+
+Visit [this site to see the code working](https://wagecalc.netlify.app).
